@@ -1,0 +1,21 @@
+Cudy TR3000 256MB V1 — Clean OpenWrt-based firmware
+
+Device profile: cudy_tr3000-256mb-v1 (NOT cudy_tr3000-v1 / 128MB)
+Target: mediatek/filogic
+Base: official OpenWrt v25.12.6
+Image format: SquashFS SYSUPGRADE
+LuCI: standard LuCI router UI
+Language: Simplified Chinese (zh-cn)
+Theme: luci-theme-shadcn, pinned revision 1830d0a78b74709a1214565f56cfe50a6a9a0084
+Proxy UI: luci-app-openclash, pinned revision e553e82e01c697aefbe1555261a503f425e00ccd
+OpenClash dependencies: dnsmasq-full, bash, curl, ca-bundle, ip-full, ruby, ruby-yaml, unzip, kmod-tun, kmod-inet-diag, kmod-nft-tproxy, luci-compat
+First-boot LAN IP: 10.0.0.1
+Package manager: apk (OpenWrt 25.12 series)
+
+Not included: openwrt.ai feeds, advertising/portal components, third-party package store,
+Docker, NAS/file-sharing suite, downloader suite, AdGuard bundle, PassWall bundle, or
+other proxy applications.
+
+The Mihomo runtime core is intentionally not bundled. Install/update it from OpenClash's
+Version Update page after first boot. This artifact is OpenWrt-based, not a binary from
+Kiddin9/Kwrt's private build pipeline.
