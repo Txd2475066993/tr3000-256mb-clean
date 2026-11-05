@@ -1,0 +1,14 @@
+#!/bin/sh
+# First-boot defaults for the Cudy TR3000 256MB V1 clean build.
+
+uci -q set luci.main.lang='zh_cn'
+uci -q set luci.themes.Shadcn='/luci-static/shadcn'
+uci -q set luci.main.mediaurlbase='/luci-static/shadcn'
+
+# Keep the LAN on the user's existing 10.0.0.0/24 network.
+uci -q set network.lan.ipaddr='10.0.0.1'
+
+uci -q commit luci
+uci -q commit network
+
+exit 0
